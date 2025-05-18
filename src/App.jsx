@@ -1,9 +1,7 @@
 import { useEffect, useState, useRef } from "react"
 import { types, locations } from "./data"
-import { Input, Select, SelectItem } from "@heroui/react"
 import GlobeMap from "./components/GlobeMap"
 import CardLocation from "./components/CardLocation"
-import { IoSearch } from "react-icons/io5";
 
 const App = () => {
 
@@ -20,6 +18,7 @@ const App = () => {
   }
   , {}));
 
+  const [isFavorite, setIsFavorite] = useState(false)
 
 
   useEffect(() => {
@@ -67,9 +66,9 @@ const App = () => {
   return (
     <div className="flex justify-center items-center bg-dark">
       <div className="w-[60dvw] h-[100dvh] overflow-scroll scrollbar-none p-14 bg-dark">
-        <h1 className="text-white text-5xl font-title">Travel Finder</h1>
+        <h1 className="text-white text-5xl font-title flex justify-start gap-5 items-center">Travel Finder</h1>
 
-        <div className="flex justify-start flex-wrap gap-3 mt-5">
+        <div className="flex justify-start flex-wrap gap-3 mt-5 items-center">
           {types.map((type, index) => (
             <p
               key={index}
@@ -80,14 +79,37 @@ const App = () => {
               {type.label}
             </p>
           ))}
+          <p
+            className={`text-white bg-[#f1f1f1]/10 backdrop-blur-sm max-w-max p-2 rounded-lg cursor-pointer`}
+            onClick={() => {setIsFavorite(!isFavorite)}}
+            style={{ backgroundColor: isFavorite ? '#ff0000' : '' }}
+          >
+            ❤️ Favorites
+          </p>
           <p className="text-gray-500 italic">Click to select the types you want to filter by 👆</p>
         </div>
 
         <div>
+
+          {isFavorite && <div>
+            <h2 className="text-2xl text-white mt-10 font-title">❤️ Favorites</h2>
+            <div className="flex justify-start flex-wrap gap-5 mt-5">
+              {(JSON.parse(window.localStorage.getItem('favoriteLocations')) || []).length > 0 ? (JSON.parse(window.localStorage.getItem('favoriteLocations')) || []).map((location, index) => (
+                <CardLocation
+                  key={index}
+                  location={location}
+                  mapRef={mapRef}
+                  getBackgroundColor={getBackgroundColor}
+                  isOnMap={true}
+                />
+              )) : <p className="text-gray-500">No favorite locations found.</p>}
+            </div>
+          </div>}
+          
           {Object.keys(locationsFiltered).map((key, index) => (
             <div key={index}>
               <h2 className="text-2xl text-white mt-10 font-title">{types.find(type => type.key === key)?.label}</h2>
-              <div className="flex justify-start flex-wrap gap-3 mt-5">
+              <div className="flex justify-start flex-wrap gap-5 mt-5">
                 {locationsFiltered[key].map((location, index2) => (
                   <CardLocation
                     key={index2}
@@ -99,6 +121,7 @@ const App = () => {
               </div>
             </div>
           ))}
+
         </div>
 
       </div>

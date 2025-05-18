@@ -6,12 +6,14 @@ import "maplibre-gl/dist/maplibre-gl.css";
 import { locations } from "../data";
 import CardLocation from "./CardLocation";
 import "./globe.css"
+import { Chip } from "@heroui/react";
 
 const GlobeMap = ({mapRef, getBackgroundColor}) => {
 
   const mapContainer = useRef(null);
 
   const elementsOnMapRef = useRef({});
+
 
   useEffect(() => {
     if (mapRef.current) {
@@ -20,12 +22,12 @@ const GlobeMap = ({mapRef, getBackgroundColor}) => {
 
     mapRef.current = new maplibregl.Map({
       container: mapContainer.current,
-      // style: "https://api.maptiler.com/maps/topo-v2/style.json?key=fOmpZv3kQMBcpznjK9v6",
       style: "https://api.maptiler.com/maps/basic-v2-dark/style.json?key=fOmpZv3kQMBcpznjK9v6",
       center: [0, 0],
       zoom: 2,
       minZoom:2,
       maxZoom: 8,
+      attributionControl: false
     });
 
     mapRef.current.addControl(new maplibregl.NavigationControl(), 'bottom-left');
@@ -34,17 +36,6 @@ const GlobeMap = ({mapRef, getBackgroundColor}) => {
       mapRef.current.setProjection({
         type: 'globe',
       });
-
-      mapRef.current.setSky({
-          "sky-color": "#ffffff",
-          "sky-horizon-blend": 0.5,
-          "horizon-color": "#06c",
-          "horizon-fog-blend": 0.9,
-          "fog-color": "#ffffff",
-          "fog-ground-blend": 0.95,
-        });
-
-
     });
 
     mapRef.current.on('load', () => {
@@ -75,7 +66,7 @@ const GlobeMap = ({mapRef, getBackgroundColor}) => {
 
         el.addEventListener('mouseover', () => {
           const popupDiv = document.createElement('div');
-          createRoot(popupDiv).render(<CardLocation location={location} mapRef={mapRef} getBackgroundColor={getBackgroundColor} />);
+          createRoot(popupDiv).render(<CardLocation location={location} mapRef={mapRef} getBackgroundColor={getBackgroundColor} isOnMap />);
 
           popup = new maplibregl.Popup({
             className: 'custom-popup',
@@ -116,7 +107,12 @@ const GlobeMap = ({mapRef, getBackgroundColor}) => {
     <div
       ref={mapContainer}
       className="w-[40dvw] h-[95dvh] mr-5 bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI1yAubPrxKhUt3-D4sm8VpaC80KgR_PttJA&s')] rounded-lg"
-    />
+    >
+      <div className="flex justify-center w-full z-0">
+        <Chip className="mt-[100px] mx-auto" variant="bordered" color="success">Explore the destinations directly on the globe</Chip>
+      </div>
+      <p className="text-center text-5xl text-white font-title mt-3">Interactive map</p>
+    </div>
   );
 };
 
