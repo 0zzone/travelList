@@ -1,5 +1,6 @@
 const {heroui} = require("@heroui/react");
 
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -11,10 +12,13 @@ export default {
     extend: {
       colors: {
         'dark': '#1c1b1b',
-        'dark-light': '#2c2b2b',
+        'dark-light': '#f1f1f1',
+      },
+      fontFamily: {
+        'title': ['volkhov', 'sans-serif'],
       },
     },
   },
-  plugins: [heroui()],
+  plugins: [heroui(), require('tailwind-scrollbar'),],
 }
 

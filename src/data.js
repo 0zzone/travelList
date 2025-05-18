@@ -1,71 +1,222 @@
 export const types = [
-  { key: "🗻", label: "🗻 Mountains", backgroundColor: "#4A5A57" },     // Muted green-gray
-  { key: "🏖️", label: "🏖️ Beaches", backgroundColor: "#4A6478" },       // Dusty blue
-  { key: "🏞️", label: "🏞️ National Parks", backgroundColor: "#4F6A4F" }, // Muted forest green
-  { key: "🏙️", label: "🏙️ Cities", backgroundColor: "#5C5C5C" },         // Medium neutral gray
-  { key: "🌍", label: "🌍 World Heritage Sites", backgroundColor: "#665066" }, // Muted violet
-  { key: "🗺️", label: "🗺️ Landmarks", backgroundColor: "#6B4E4E" },     // Muted brick red
-  { key: "🏕️", label: "🏕️ Camping", backgroundColor: "#556B57" },       // Sage green
-  { key: "🚴‍♂️", label: "🚴‍♂️ Cycling", backgroundColor: "#4C5C70" },   // Slate blue
-  { key: "🧗‍♂️", label: "🧗‍♂️ Climbing", backgroundColor: "#565E70" },  // Cool gray
-  { key: "🏄‍♀️", label: "🏄‍♀️ Surfing", backgroundColor: "#3F6D78" },    // Muted ocean teal
+  { key: "🗻", label: "🗻 Mountains", backgroundColor: "#4A5A57" },
+  { key: "🏖️", label: "🏖️ Beaches", backgroundColor: "#4A6478" },
+  { key: "🏞️", label: "🏞️ National Parks", backgroundColor: "#4F6A4F" },
+  { key: "🏙️", label: "🏙️ Cities", backgroundColor: "#5C5C5C" },
+  { key: "🌍", label: "🌍 World Heritage Sites", backgroundColor: "#665066" },
+  { key: "🗺️", label: "🗺️ Landmarks", backgroundColor: "#6B4E4E" },
 ];
 
-
-
 export const locations = [
-    {
-        name: "Mount Everest",
-        type: "🗻",
-        coordinates: [86.9250, 27.9881],
-        description: "The highest mountain in the world, located in the Himalayas.",
-    },
-    {
-        name: "Grand Canyon",
-        type: "🏞️",
-        coordinates: [-112.1129, 36.1069],
-        description: "A massive canyon carved by the Colorado River in Arizona.",
-    },
-    {
-        name: "Great Barrier Reef",
-        type: "🏖️",
-        coordinates: [147.6992, -18.2871],
-        description: "The world's largest coral reef system, located off the coast of Australia.",
-    },
-    {
-        name: "Eiffel Tower",
-        type: "🗺️",
-        coordinates: [2.2945, 48.8584],
-        description: "An iconic iron lattice tower located in Paris, France.",
-    },
-    {
-        name: "Yosemite National Park",
-        type: "🏞️",
-        coordinates: [-119.5383, 37.8651],
-        description: "A national park in California known for its stunning granite cliffs and waterfalls.",
-    },
-    {
-        name: "Machu Picchu",
-        type: "🌍",
-        coordinates: [-72.5450, -13.1631],
-        description: "An ancient Incan city located in the Andes Mountains of Peru.",
-    },
-    {
-        name: "Santorini",
-        type: "🏖️",
-        coordinates: [25.4300, 36.3932],
-        description: "A beautiful island in Greece known for its stunning sunsets and white-washed buildings.",
-    },
-    {
-        name: "Yellowstone National Park",
-        type: "🏞️",
-        coordinates: [-110.5885, 44.4280],
-        description: "The first national park in the world, located primarily in Wyoming.",
-    },
-    {
-        name: "Statue of Liberty",
-        type: "🗺️",
-        coordinates: [-74.0445, 40.6892],
-        description: "A symbol of freedom and democracy located on Liberty Island in New York City.",
-    },
+  {
+    name: "Mount Everest",
+    type: "🗻",
+    coordinates: [86.9250, 27.9881],
+    description: "The highest mountain in the world, located in the Himalayas.",
+    image: "https://cdn.futura-sciences.com/sources/images/everest-himalaya-montagne.jpeg",
+  },
+  {
+    name: "Matterhorn",
+    type: "🗻",
+    coordinates: [7.6586, 45.9763],
+    description: "A dramatic mountain in the Alps, on the border between Switzerland and Italy.",
+    image: "https://assets.explore-share.com/static_page/65940c89de412b98fc14a844/header/1650892942-francis-kesley.jpg?fit=clip&fm=webp&h=800&q=30&w=1600",
+  },
+  {
+    name: "Mount Fuji",
+    type: "🗻",
+    coordinates: [138.7274, 35.3606],
+    description: "Japan's iconic snow-capped volcano.",
+    image: "https://res.cloudinary.com/jnto/image/upload/w_750,h_503,fl_lossy,f_auto/v1531981666/fujiguide/SG010_6",
+  },
+  {
+    name: "Rocky Mountains",
+    type: "🗻",
+    coordinates: [-106.4454, 39.5501],
+    description: "A major mountain range stretching from Canada to New Mexico.",
+    image: "https://hips.hearstapps.com/hmg-prod/images/view-of-peyto-lake-from-bow-summit-along-the-royalty-free-image-1571083934.jpg?crop=0.99812xw:1xh;center,top&resize=980:*",
+  },
+  {
+    name: "Andes Mountains",
+    type: "🗻",
+    coordinates: [-70.0000, -32.6532],
+    description: "The longest continental mountain range in the world, spanning South America.",
+    image: "https://cdn.hswstatic.com/gif/gettyimages-1225346915.jpg",
+  },
+  {
+    name: "Great Barrier Reef",
+    type: "🏖️",
+    coordinates: [147.6992, -18.2871],
+    description: "The world's largest coral reef system, located off the coast of Australia.",
+    image: "https://www.relaxingjourneys.co.nz/wp-content/uploads/2024/10/the-great-barrier-reef.jpg",
+  },
+  {
+    name: "Santorini",
+    type: "🏖️",
+    coordinates: [25.4300, 36.3932],
+    description: "A beautiful island in Greece known for its stunning sunsets and white-washed buildings.",
+    image: "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0a/4b/e4/4c.jpg",
+  },
+  {
+    name: "Bondi Beach",
+    type: "🏖️",
+    coordinates: [151.2743, -33.8915],
+    description: "One of Australia's most famous beaches located in Sydney.",
+    image: "https://media.timeout.com/images/105239239/image.jpg",
+  },
+  {
+    name: "Copacabana",
+    type: "🏖️",
+    coordinates: [-43.1822, -22.9711],
+    description: "A world-renowned beach in Rio de Janeiro, Brazil.",
+    image: "https://media.istockphoto.com/id/1250523627/fr/photo/mosa%C3%AFque-et-palmiers-de-trottoir-de-copacabana-%C3%A0-rio-de-janeiro.jpg?s=612x612&w=0&k=20&c=XFB5lSY7cV628bWhEYKIadPZGuzj3RZaEmTq6VlcW0U=",
+  },
+  {
+    name: "Navagio Beach",
+    type: "🏖️",
+    coordinates: [20.6241, 37.8590],
+    description: "Also known as Shipwreck Beach, a picturesque cove on Zakynthos Island, Greece.",
+    image: "https://zakynthoscruises.com/wp-content/uploads/2021/02/Navagio-Shipwrek-Beach-Zakynthos-Cruises-1.jpg",
+  },
+  {
+    name: "Grand Canyon",
+    type: "🏞️",
+    coordinates: [-112.1129, 36.1069],
+    description: "A massive canyon carved by the Colorado River in Arizona.",
+    image: "https://www.globalnationalparks.com/wp-content/uploads/national-park-grand-canyon.jpg",
+  },
+  {
+    name: "Yosemite National Park",
+    type: "🏞️",
+    coordinates: [-119.5383, 37.8651],
+    description: "A national park in California known for its stunning granite cliffs and waterfalls.",
+    image: "https://cdn.craft.cloud/101e4579-0e19-46b6-95c6-7eb27e4afc41/assets/uploads/Yosemite-National-Park-for-Hero.jpg",
+  },
+  {
+    name: "Yellowstone National Park",
+    type: "🏞️",
+    coordinates: [-110.5885, 44.4280],
+    description: "The first national park in the world, located primarily in Wyoming.",
+    image: "https://media.cnn.com/api/v1/images/stellar/prod/220225123041-15-yellowstone-150th-anniversary.jpg?q=h_2000,w_3000,x_0,y_0",
+  },
+  {
+    name: "Banff National Park",
+    type: "🏞️",
+    coordinates: [-115.5708, 51.4968],
+    description: "A stunning national park in the Canadian Rockies known for its turquoise lakes and mountains.",
+    image: "https://afar.brightspotcdn.com/dims4/default/4d8a7ee/2147483647/strip/false/crop/1600x1200+0+0/resize/1486x1115!/quality/90/?url=https%3A%2F%2Fk3-prod-afar-media.s3.us-west-2.amazonaws.com%2Fbrightspot%2F94%2Ff2%2F6a3272737dbb52c5759f6db3c7f8%2Foriginal-shutterstock-695991625.jpg",
+  },
+  {
+    name: "Kruger National Park",
+    type: "🏞️",
+    coordinates: [31.4857, -23.9884],
+    description: "One of Africa’s largest game reserves located in South Africa.",
+    image: "https://www.kruger-2-kalahari.com/images/Bongani-Mountain-Lodge-image399.jpg",
+  },
+  {
+    name: "Tokyo",
+    type: "🏙️",
+    coordinates: [139.6917, 35.6895],
+    description: "Japan’s bustling capital blending tradition and modernity.",
+    image: "https://img.static-kl.com/images/media/216337E7-BFE5-4AA6-9C9E180C3E5AC6A2",
+  },
+  {
+    name: "New York City",
+    type: "🏙️",
+    coordinates: [-74.0060, 40.7128],
+    description: "The largest city in the U.S., known for its skyline and cultural diversity.",
+    image: "https://www.new-york-city.fr/wp-content/uploads/2020/11/Times_Square_New_York.jpg",
+  },
+  {
+    name: "Paris",
+    type: "🏙️",
+    coordinates: [2.3522, 48.8566],
+    description: "France’s capital known for its art, fashion, and landmarks like the Eiffel Tower.",
+    image: "https://hospitality-on.com/sites/default/files/2017-09/Paris.jpg",
+  },
+  {
+    name: "Dubai",
+    type: "🏙️",
+    coordinates: [55.2708, 25.2048],
+    description: "A modern city in the UAE known for skyscrapers and luxury shopping.",
+    image: "https://www.areion24.news/wp-content/uploads/2022/11/MO53-80.jpg",
+  },
+  {
+    name: "Barcelona",
+    type: "🏙️",
+    coordinates: [2.1734, 41.3851],
+    description: "A vibrant Spanish city famous for its art and architecture.",
+    image: "https://a.storyblok.com/f/239725/1440x832/098048a814/01_es_barcelona_hero.png/m/3840x2219",
+  },
+  {
+    name: "Machu Picchu",
+    type: "🌍",
+    coordinates: [-72.5450, -13.1631],
+    description: "An ancient Incan city located in the Andes Mountains of Peru.",
+    image: "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/b2/e5/f3.jpg",
+},
+{
+    name: "Angkor Wat",
+    type: "🌍",
+    coordinates: [103.8667, 13.4125],
+    description: "A massive temple complex in Cambodia and the largest religious monument in the world.",
+    image: "https://cambodgeautrement.fr/images/Temples/Angkor-Wat.jpg",
+},
+{
+    name: "Pyramids of Giza",
+    type: "🌍",
+    coordinates: [31.1342, 29.9792],
+    description: "The last remaining wonder of the ancient world, located in Egypt.",
+    image: "https://ucarecdn.com/1b31516c-069f-4438-8ea7-57c31be57667/-/crop/1920x1007/0,41/-/resize/1200x630/-/resize/x300/",
+},
+{
+    name: "Taj Mahal",
+    type: "🌍",
+    coordinates: [78.0421, 27.1751],
+    description: "A white marble mausoleum in India, symbolizing eternal love.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/d/da/Taj-Mahal.jpg",
+},
+{
+    name: "Great Wall of China",
+    type: "🌍",
+    coordinates: [117.2365, 40.6769],
+    description: "A series of fortifications stretching across northern China.",
+    image: "https://futureeducationmagazine.com/wp-content/uploads/2023/07/1.1-Reason-for-building-it.jpg",
+},
+{
+    name: "Eiffel Tower",
+    type: "🗺️",
+    coordinates: [2.2945, 48.8584],
+    description: "An iconic iron lattice tower located in Paris, France.",
+    image: "https://planetrail.co.uk/wp-content/uploads/Eiffel-Tower-Paris-resized.jpg",
+},
+{
+    name: "Statue of Liberty",
+    type: "🗺️",
+    coordinates: [-74.0445, 40.6892],
+    description: "A symbol of freedom and democracy located on Liberty Island in New York City.",
+    image: "https://www.statueofliberty.org/wp-content/uploads/2020/07/Liberty-from-ground-with-bright-blue-sky-2-1-scaled-e1595430911547.jpg",
+},
+{
+    name: "Colosseum",
+    type: "🗺️",
+    coordinates: [12.4922, 41.8902],
+    description: "An ancient amphitheater located in Rome, Italy.",
+    image: "https://as1.ftcdn.net/v2/jpg/01/41/92/52/1000_F_141925229_dKk4YLxNj5OYKJVO3lmxhKRwFTjFrzZL.jpg",
+},
+{
+    name: "Big Ben",
+    type: "🗺️",
+    coordinates: [-0.1246, 51.5007],
+    description: "The iconic clock tower located at the north end of the Palace of Westminster in London.",
+    image: "https://as2.ftcdn.net/v2/jpg/08/75/21/79/1000_F_875217918_tWNKeQCzbXzAO38itjkujs3vVK4HLAV8.jpg",
+},
+{
+    name: "Sydney Opera House",
+    type: "🗺️",
+    coordinates: [151.2153, -33.8568],
+    description: "A world-famous performing arts center in Sydney, Australia.",
+    image: "https://media.architecturaldigest.com/photos/63d82d299dd44a3242d15ade/16:9/w_2580,c_limit/GettyImages-982774858.jpg",
+},
+
 ]

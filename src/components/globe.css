@@ -1,0 +1,10 @@
+.custom-popup .maplibregl-popup-content {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+.custom-popup .maplibregl-popup-tip {
+  display: none !important;
+}
