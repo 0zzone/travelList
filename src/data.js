@@ -1,15 +1,17 @@
 export const types = [
-    { key: "🗻", label: "🗻 Mountains", backgroundColor: "#A0C1B8" },
-    { key: "🏖️", label: "🏖️ Beaches", backgroundColor: "#F6D55C" },
-    { key: "🏞️", label: "🏞️ National Parks", backgroundColor: "#3CAEA3" },
-    { key: "🏙️", label: "🏙️ Cities", backgroundColor: "#F3722C" },
-    { key: "🌍", label: "🌍 World Heritage Sites", backgroundColor: "#F9C74F" },
-    { key: "🗺️", label: "🗺️ Landmarks", backgroundColor: "#F94144" },
-    { key: "🏕️", label: "🏕️ Camping", backgroundColor: "#F3722C" },
-    { key: "🚴‍♂️", label: "🚴‍♂️ Cycling", backgroundColor: "#F9C74F" },
-    { key: "🧗‍♂️", label: "🧗‍♂️ Climbing", backgroundColor: "#F94144" },
-    { key: "🏄‍♀️", label: "🏄‍♀️ Surfing", backgroundColor: "#F3722C" },
-]
+  { key: "🗻", label: "🗻 Mountains", backgroundColor: "#4A5A57" },     // Muted green-gray
+  { key: "🏖️", label: "🏖️ Beaches", backgroundColor: "#4A6478" },       // Dusty blue
+  { key: "🏞️", label: "🏞️ National Parks", backgroundColor: "#4F6A4F" }, // Muted forest green
+  { key: "🏙️", label: "🏙️ Cities", backgroundColor: "#5C5C5C" },         // Medium neutral gray
+  { key: "🌍", label: "🌍 World Heritage Sites", backgroundColor: "#665066" }, // Muted violet
+  { key: "🗺️", label: "🗺️ Landmarks", backgroundColor: "#6B4E4E" },     // Muted brick red
+  { key: "🏕️", label: "🏕️ Camping", backgroundColor: "#556B57" },       // Sage green
+  { key: "🚴‍♂️", label: "🚴‍♂️ Cycling", backgroundColor: "#4C5C70" },   // Slate blue
+  { key: "🧗‍♂️", label: "🧗‍♂️ Climbing", backgroundColor: "#565E70" },  // Cool gray
+  { key: "🏄‍♀️", label: "🏄‍♀️ Surfing", backgroundColor: "#3F6D78" },    // Muted ocean teal
+];
+
+
 
 export const locations = [
     {
